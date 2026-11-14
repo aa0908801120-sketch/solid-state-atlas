@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Solid State Atlas：用清楚的觀念、常考迷思與自我檢核，快速複習半導體元件與固態電子學。">
+  <meta name="theme-color" content="#f5f6f1">
+  <title>Solid State Atlas｜半導體概念圖鑑</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="./data/notes.js" defer></script>
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#/" aria-label="Solid State Atlas 首頁">
+        <span class="brand-mark" aria-hidden="true"><span class="brand-orbit"></span></span>
+        <span class="brand-text"><strong>SOLID STATE</strong><small>ATLAS / 半導體概念圖鑑</small></span>
+      </a>
+      <nav class="header-nav" aria-label="主要導覽">
+        <a href="#/" data-nav="home">探索筆記</a>
+        <a href="#roadmap" data-nav="roadmap">學習路線</a>
+        <a href="#about" data-nav="about">關於專題</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換明暗模式" title="切換明暗模式">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.7 13.1A8.6 8.6 0 0 1 10.9 3.3 8.7 8.7 0 1 0 20.7 13.1Z"/></svg>
+        <span>外觀</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <div id="homeView">
+        <section class="hero" aria-labelledby="heroTitle">
+          <div class="hero-content">
+            <div class="eyebrow"><span class="status-dot"></span> THE SEMICONDUCTOR FIELD NOTES <span class="eyebrow-line"></span> VOL. 01</div>
+            <h1 id="heroTitle">把抽象的半導體物理，<br><em>變成看得懂的觀念。</em></h1>
+            <p class="hero-description">從能帶、載子傳輸到 PN 接面與寬能隙材料。每篇筆記都整理核心概念、關鍵公式與常見迷思，讓複習不再只靠背誦。</p>
+            <div class="hero-actions">
+              <a class="primary-link" href="#library">開始探索 <span aria-hidden="true">↗</span></a>
+              <a class="secondary-link" href="#roadmap">查看學習路線 <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-footnote"><span id="notesRange">NO. 001—009</span><span>以理解為出發點的學習資料庫</span></div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="visual-header"><span>FIG. 01</span><span>ENERGY BAND DIAGRAM</span></div>
+            <svg class="band-svg" viewBox="0 0 500 390" xmlns="http://www.w3.org/2000/svg">
+              <defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="currentColor" opacity=".12"/></pattern></defs>
+              <rect x="0" y="0" width="500" height="390" fill="url(#dots)"/>
+              <g fill="none" stroke="currentColor" opacity=".24" stroke-width="1"><path d="M45 55V345M45 345H458"/><path d="M45 85H454M45 305H454" stroke-dasharray="3 7"/></g>
+              <g stroke="currentColor" fill="none"><path d="M68 111H432" stroke-width="3"/><path d="M68 275H432" stroke-width="3"/><path d="M252 114V272" stroke-width="1.5" stroke-dasharray="4 6"/></g>
+              <g fill="currentColor" font-family="system-ui" font-size="16"><text x="68" y="100">E_c</text><text x="68" y="298">E_v</text></g>
+              <g fill="none" stroke="#b6e64e" stroke-width="2"><path d="M260 132V251"/><path d="m253 141 7-10 7 10M253 242l7 10 7-10"/></g>
+              <text x="279" y="197" fill="#b6e64e" font-family="system-ui" font-weight="700" font-size="22">E<tspan baseline-shift="sub" font-size="12">g</tspan></text>
+              <g fill="currentColor"><circle cx="127" cy="111" r="5"/><circle cx="170" cy="111" r="5"/><circle cx="346" cy="275" r="5"/><circle cx="389" cy="275" r="5"/></g>
+              <g fill="none" stroke="#b6e64e" stroke-width="1.5" opacity=".8"><path d="M170 105q-36-48 15-76" stroke-dasharray="4 5"/><path d="m179 36 6-7 5 8"/></g>
+              <text x="72" y="364" fill="currentColor" font-family="system-ui" font-size="12" letter-spacing="2">VALENCE BAND</text>
+              <text x="297" y="68" fill="currentColor" font-family="system-ui" font-size="12" letter-spacing="2">CONDUCTION BAND</text>
+            </svg>
+            <div class="visual-footer"><span>BAND GAP / ENERGY LEVELS</span><span>01 / 03</span></div>
+            <span class="visual-corner v1">+</span><span class="visual-corner v2">+</span>
+          </div>
+        </section>
+
+        <section class="metrics" aria-label="網站摘要">
+          <div><strong id="totalNoteCount">09</strong><span>核心概念 / NOTES</span></div>
+          <div><strong id="chapterCount">04</strong><span>主題分類 / CHAPTERS</span></div>
+          <div><strong id="readCount">00</strong><span>已完成 / COMPLETED</span></div>
+          <div><strong>100%</strong><span>公開閱讀 / OPEN ACCESS</span></div>
+        </section>
+
+        <section class="library-section section-wrap" id="library" aria-labelledby="libraryTitle">
+          <div class="section-heading">
+            <div><p class="section-kicker">01 / CONCEPT LIBRARY</p><h2 id="libraryTitle">概念資料庫<span class="green-dot">.</span></h2></div>
+            <p>將複雜的概念拆解成能夠真正理解的單元。<br>搜尋、篩選、收藏，按照自己的節奏學習。</p>
+          </div>
+          <div class="search-controls">
+            <label class="search-box" for="searchInput"><span class="search-icon" aria-hidden="true">⌕</span><input id="searchInput" type="search" autocomplete="off" placeholder="搜尋主題、公式或關鍵字..." aria-label="搜尋筆記"><kbd>/</kbd></label>
+            <button class="saved-filter" id="savedFilter" type="button" aria-pressed="false">☆ <span>我的收藏</span></button>
+          </div>
+          <div class="filter-row" id="filterRow" role="group" aria-label="主題分類"></div>
+          <div class="result-bar"><span id="resultSummary">正在載入筆記...</span><span>SELECT A CARD TO READ <span aria-hidden="true">↘</span></span></div>
+          <div class="notes-grid" id="notesGrid" aria-live="polite"></div>
+          <div class="empty-state" id="emptyState" hidden><span>∅</span><h3>找不到符合條件的筆記</h3><p>試著更換搜尋字詞或取消篩選。</p><button id="resetFilters" type="button">清除所有篩選</button></div>
+        </section>
+
+        <section class="roadmap section-wrap" id="roadmap" aria-labelledby="roadmapTitle">
+          <div class="section-heading"><div><p class="section-kicker">02 / LEARNING ROUTE</p><h2 id="roadmapTitle">一張清楚的學習地圖<span class="green-dot">.</span></h2></div><p>不用一次讀完所有內容。<br>照著概念之間的依賴關係，一步步建立理解。</p></div>
+          <div class="route-grid">
+            <div class="route-card"><span class="route-number">01 <span>— START HERE</span></span><div class="route-line"></div><h3>先理解材料</h3><p>能帶、載子濃度、摻雜與費米能階，是後續所有元件分析的基礎。</p><a href="#/note/band-structure">從能帶開始 ↗</a></div>
+            <div class="route-card"><span class="route-number">02 <span>— BUILD THE MODEL</span></span><div class="route-line"></div><h3>再理解載子</h3><p>漂移、擴散、復合與霍爾效應，幫你把公式連結到實際物理現象。</p><a href="#/note/drift-diffusion">從傳輸開始 ↗</a></div>
+            <div class="route-card"><span class="route-number">03 <span>— CONNECT TO DEVICES</span></span><div class="route-line"></div><h3>最後走向元件</h3><p>由 PN 接面、崩潰機制延伸到 SiC、GaN 和 Ga₂O₃ 等材料應用。</p><a href="#/note/pn-junction">從 PN 接面開始 ↗</a></div>
+          </div>
+        </section>
+
+        <section class="about-section section-wrap" id="about" aria-labelledby="aboutTitle">
+          <div class="about-left"><p class="section-kicker">03 / ABOUT THE PROJECT</p><h2 id="aboutTitle">不只是一個網站。<br><em>也是可以持續成長的筆記系統。</em></h2></div>
+          <div class="about-right"><p>Solid State Atlas 是一個以繁體中文撰寫的半導體學習網站。它不只展示現有知識，也透過清楚的檔案結構與 <code>AGENTS.md</code> 專案規範，讓 AI 能在未來安全地新增概念、維護風格、修正內容並驗證功能。</p><p class="about-small">本站為課程專題示範，內容僅供學習與複習，不取代正式教材；公式會標示適用條件。</p><a class="about-link" href="./AGENTS.md">閱讀 AI 協作規則 <span aria-hidden="true">↗</span></a></div>
+        </section>
+      </div>
+
+      <section class="detail-view" id="detailView" hidden aria-labelledby="detailTitle">
+        <div class="detail-topbar"><a href="#/" class="back-link" id="backLink">← 返回概念資料庫</a><span>THE SEMICONDUCTOR FIELD NOTES</span></div>
+        <div id="detailContent"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div><strong>SOLID STATE <span>ATLAS.</span></strong><span>把知識整理成可以繼續生長的系統。</span></div><p>MADE FOR LEARNING · 2026<br>STATIC SITE / GITHUB PAGES READY</p><a href="#/">BACK TO TOP ↑</a></footer>
+  </div>
+</body>
+</html>
